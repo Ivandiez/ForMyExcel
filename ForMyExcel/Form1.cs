@@ -19,11 +19,11 @@ namespace ForMyExcel
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ExcelClass ex = new ExcelClass(@"C:\Users\vanka\source\repos\ForMyExcel\ForMyExcel\bin\Debug\Форма для ответа — копия1.xlsx", 1);
+            ExcelClass ex = new ExcelClass(@".\Форма для ответа — копия1.xlsx", 1);
 
             double[,] read = ex.ReadRange(7, 6, 38, 6);
             ex.Close();
-            ExcelClass ex1 = new ExcelClass(@"C:\Users\vanka\source\repos\ForMyExcel\ForMyExcel\bin\Debug\Форма для ответа — копия1 — копия.xlsx", 1);
+            ExcelClass ex1 = new ExcelClass(@".\Форма для ответа — копия1 — копия.xlsx", 1);
             ex1.WriteRange(7, 7, 38, 7, read);
             ex1.ClearRange();
             ex1.Save();
